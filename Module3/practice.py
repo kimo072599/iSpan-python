@@ -5,6 +5,20 @@
 # 數字太小 要提示「請輸入更大的數字」
 # 使用者猜對要回傳「恭喜中獎」
 
+user_input = int(input("請輸入 1 ~ 100 之間的正整數:"))
+answer = 5
+
+while user_input != answer:
+    if user_input < 1 or user_input > 100:
+        user_input = int(input("超出範圍，請重新輸入："))
+    elif user_input > answer:
+        user_input = int(input("請輸入更小的數字："))
+    elif user_input < answer:
+        user_input = int(input("請輸入更大的數字："))
+    else:
+        break
+
+print("恭喜中獎")
 
 
 
